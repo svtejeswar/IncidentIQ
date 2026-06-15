@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ── Dark theme (default) ─────────────────────────────── */
+  :root,
+  html.dark {
+    --background: #0f0f13;
+    --surface: #151519;
+    --surface-2: #1c1c24;
+    --border: #1e1e28;
+    --border-2: #2c2c3c;
+    --foreground: #e4e4f0;
+    --foreground-2: #8888a0;
+    --foreground-3: #55555f;
+    --primary: #6366f1;
+    --primary-dim: rgba(99, 102, 241, 0.14);
+    --primary-fg: #ffffff;
+    --destructive: #ef4444;
+    --destructive-dim: rgba(239, 68, 68, 0.12);
+    --success: #22c55e;
+    --success-dim: rgba(34, 197, 94, 0.12);
+    --warning: #f59e0b;
+    --warning-dim: rgba(245, 158, 11, 0.12);
+    --orange: #f97316;
+    --orange-dim: rgba(249, 115, 22, 0.12);
+  }
+
+  /* ── Light theme ──────────────────────────────────────── */
+  html.light {
+    --background: #ffffff;
+    --surface: #f8f9fb;
+    --surface-2: #f0f1f5;
+    --border: #e3e4ec;
+    --border-2: #cccedc;
+    --foreground: #0f0f13;
+    --foreground-2: #60607a;
+    --foreground-3: #9999aa;
+    --primary: #6366f1;
+    --primary-dim: rgba(99, 102, 241, 0.10);
+    --primary-fg: #ffffff;
+    --destructive: #dc2626;
+    --destructive-dim: rgba(220, 38, 38, 0.10);
+    --success: #16a34a;
+    --success-dim: rgba(22, 163, 74, 0.10);
+    --warning: #d97706;
+    --warning-dim: rgba(217, 119, 6, 0.10);
+    --orange: #ea580c;
+    --orange-dim: rgba(234, 88, 12, 0.10);
+  }
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--foreground-3); }

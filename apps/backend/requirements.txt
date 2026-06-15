@@ -1,0 +1,39 @@
+# Python 3.12 required.
+# Lower bound: sentence-transformers>=3.9 rules out 3.8.
+# Upper bound: torch==2.5.1 has no Windows/macOS cp313 wheels; 3.13 is unsupported on this platform.
+# WARNING: do not upgrade pymongo independently — motor==3.6.0 requires pymongo>=4.9,<4.10.
+
+# Web framework
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.18
+
+# Data validation
+pydantic==2.10.3
+pydantic-settings==2.6.1
+
+# MongoDB
+motor==3.6.0
+pymongo==4.9.2
+
+# LLM
+groq==0.13.0
+
+# Embeddings
+sentence-transformers==3.3.1
+torch==2.5.1
+
+# File processing
+pypdf==5.1.0
+python-docx==1.1.2
+
+# Async file I/O
+aiofiles==24.1.0
+
+# Logging
+structlog==24.4.0
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.24.0
+httpx==0.28.1
